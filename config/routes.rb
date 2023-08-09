@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   post 'login' => 'auth#login'
  
   get 'users/self' => 'users#show'
+  get 'csv/export' => 'contacts#export'
+  post 'csv/import' => 'contacts#import_csv'
+
+
   put 'users/self' => 'users#update'
   delete 'users/self' => 'users#destroy'
 end
